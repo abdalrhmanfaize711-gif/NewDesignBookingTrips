@@ -65,40 +65,41 @@ namespace NewDesignBookingTrips
                 {
                     MessageBox.Show("Invalid username or password.");
                     return;
-            }
-            
-
-            //end of validation
-
-            
-            if (comboBox1.Text == "User")
-            {
-
-                using (var form = new LoginUsercs())
-                {
-                    this.Hide();
-                    form.ShowDialog();
-                    this.Show();
                 }
-            }
 
 
-            else if (comboBox1.Text == "Admin")
-            {
-                using(var form = new Admin())
+                //end of validation
+
+
+                if (comboBox1.Text == "User")
                 {
-                    this.Hide();
-                    form.ShowDialog();
-                    this.Show();
+
+                    using (var form = new LoginUsercs())
+                    {
+                        this.Hide();
+                        form.ShowDialog();
+                        this.Show();
+                    }
                 }
-            }
-            else if (comboBox1.Text == "")
-            {
 
-                MessageBox.Show("plase Select Your Role ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
-           
+                else if (comboBox1.Text == "Admin")
+                {
+                    using (var form = new Admin())
+                    {
+                        this.Hide();
+                        form.ShowDialog();
+                        this.Show();
+                    }
+                }
+                else if (comboBox1.Text == "")
+                {
+
+                    MessageBox.Show("plase Select Your Role ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+            }
         }
 
        
