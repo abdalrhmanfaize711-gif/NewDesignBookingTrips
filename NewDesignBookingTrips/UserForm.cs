@@ -12,6 +12,8 @@ namespace NewDesignBookingTrips
 {
     public partial class UserForm : Form
     {
+        DatabaseHelper db = new DatabaseHelper();
+        string query = "SELECT * FROM Trips;";
         public UserForm()
         {
             InitializeComponent();
@@ -24,6 +26,8 @@ namespace NewDesignBookingTrips
         private void UserForm_Load(object sender, EventArgs e)
         {
             gridViwe();
+            dgvTrips.DataSource= db.loadData(query);
+            
         }
    //_____________________________function______________________________________________??
    void gridViwe()
@@ -37,7 +41,6 @@ namespace NewDesignBookingTrips
 
         private void dgvTrips_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void yourTrip_Click(object sender, EventArgs e)

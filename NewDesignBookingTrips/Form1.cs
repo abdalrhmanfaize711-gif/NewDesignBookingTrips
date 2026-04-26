@@ -134,7 +134,7 @@ namespace NewDesignBookingTrips
             string query = "INSERT INTO Users (email) VALUES (@email)";
             SqlParameter[] parameter =
             {
-                new SqlParameter("@email",guna2TextBox1.Text),
+                new SqlParameter("@email",Username)
             };
             db.Insert(query, parameter);
             MessageBox.Show(" row(s) inserted successfully!");

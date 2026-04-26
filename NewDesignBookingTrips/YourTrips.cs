@@ -51,5 +51,9 @@ namespace NewDesignBookingTrips
                 form.Show();
             }
         }
+
+        private void gridTrips_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
     }
 }
