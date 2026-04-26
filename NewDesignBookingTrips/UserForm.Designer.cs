@@ -1,4 +1,6 @@
-﻿namespace NewDesignBookingTrips
+﻿using Guna.UI2.WinForms;
+
+namespace NewDesignBookingTrips
 {
     partial class UserForm
     {

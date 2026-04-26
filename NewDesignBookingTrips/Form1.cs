@@ -29,7 +29,6 @@ namespace NewDesignBookingTrips
         private void Login_Click(object sender, EventArgs e)
         {
 
-
             string username = Username.Text.Trim();
             string password = Password.Text;
 
