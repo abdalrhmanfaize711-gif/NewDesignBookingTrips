@@ -51,23 +51,26 @@ namespace NewDesignBookingTrips
 
                 bool valid = PasswordHelper.VerifyPassword(password, hash, salt);
 
-                MessageBox.Show(valid
-                    ? "Login successful!"
-                    : "Invalid username or password.");
+                if (valid)
+                {
+                    MessageBox.Show("Login successful!");
+                    using (var form = new UserForm())
+                    {
+                        this.Hide();
+                        form.ShowDialog();
+                        this.Show();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password.");
+                    return;
             }
-            else
-            {
-                MessageBox.Show("Invalid username or password.");
-            }
+            
 
             //end of validation
 
-            using (var form = new bookingform(guna2TextBox1.Text))
-            {
-                this.Hide();
-                form.ShowDialog();
-                this.Show();
-            }
+            
             if (comboBox1.Text == "User")
             {
 
